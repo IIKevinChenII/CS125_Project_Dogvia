@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -28,7 +27,7 @@ public class EmailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_email);
 // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        Button send = findViewById(R.id.button);
+        Button send = findViewById(R.id.sendBtn);
         send.setOnClickListener(unused -> {
             // Request a string response from the provided URL.
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,

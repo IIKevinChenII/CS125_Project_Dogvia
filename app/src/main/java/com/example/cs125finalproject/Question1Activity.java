@@ -18,30 +18,10 @@ public class Question1Activity extends AppCompatActivity {
         Button wrongButton2 = findViewById(R.id.wrongBtn2);
         Button wrongButton3 = findViewById(R.id.wrongBtn3);
         Button correctButton = findViewById(R.id.correctBtn);
-        wrongButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openWrongActivity();
-            }
-        });
-        wrongButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openWrongActivity();
-            }
-        });
-        wrongButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openWrongActivity();
-            }
-        });
-        correctButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openQuestion2Activity();
-            }
-        });
+        wrongButton1.setOnClickListener(view -> openWrongActivity());
+        wrongButton2.setOnClickListener(view -> openWrongActivity());
+        wrongButton3.setOnClickListener(view -> openWrongActivity());
+        correctButton.setOnClickListener(view -> openQuestion2Activity());
     }
     private void openWrongActivity() {
         startActivity(new Intent(this, WrongActivity.class));
