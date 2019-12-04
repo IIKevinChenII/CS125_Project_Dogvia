@@ -39,7 +39,7 @@ public class EmailActivity extends AppCompatActivity {
                             JsonElement element = parser.parse(response);
                             JsonObject object = (JsonObject) element;
                             String imageUrl = object.get("message").getAsString();
-                            
+
                         }
                     }, new Response.ErrorListener() {
                 @Override
