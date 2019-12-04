@@ -7,22 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class EmailActivity extends AppCompatActivity {
+public class EndActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_email);
-        Button sendButton = findViewById(R.id.sendBtn);
-        sendButton.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_end);
+        Button restartButton = findViewById(R.id.restartBtn);
+        restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openEndActivity();
+                openMainActivity();
             }
         });
     }
-    private void openEndActivity() {
-        startActivity(new Intent(this, EndActivity.class));
+    private void openMainActivity() {
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 }

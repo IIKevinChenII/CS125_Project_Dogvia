@@ -23,5 +23,6 @@ public class MainActivity extends AppCompatActivity {
     }
     private void openQuestion1Activity() {
         startActivity(new Intent(this, Question1Activity.class));
+        finish();
     }
 }
