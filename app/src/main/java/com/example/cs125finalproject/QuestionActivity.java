@@ -54,8 +54,8 @@ public class QuestionActivity extends AppCompatActivity {
         TextView questionTextView = findViewById(R.id.questionText);
         Button ansButton1 = findViewById(R.id.answerBtn1);
         Button ansButton2 = findViewById(R.id.answerBtn2);
-        Button ansButton3 = findViewById(R.id.answerBtn4);
-        Button ansButton4 = findViewById(R.id.answerBtn3);
+        Button ansButton3 = findViewById(R.id.answerBtn3);
+        Button ansButton4 = findViewById(R.id.answerBtn4);
         titleTextView.setText(qsBank.get(count)[0]);
         questionTextView.setText(qsBank.get(count)[1]);
         ansButton1.setText(qsBank.get(count)[2]);
