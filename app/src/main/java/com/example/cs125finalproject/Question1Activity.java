@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class Question1Activity extends AppCompatActivity {
 
@@ -14,20 +12,19 @@ public class Question1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question1);
-        Button wrongButton1 = findViewById(R.id.wrongBtn1);
-        Button wrongButton2 = findViewById(R.id.wrongBtn2);
-        Button wrongButton3 = findViewById(R.id.wrongBtn3);
-        Button correctButton = findViewById(R.id.correctBtn);
+        Button wrongButton1 = findViewById(R.id.answerBtn1);
+        Button wrongButton2 = findViewById(R.id.answerBtn2);
+        Button wrongButton3 = findViewById(R.id.answerBtn4);
+        Button correctButton = findViewById(R.id.answerBtn3);
         wrongButton1.setOnClickListener(view -> openWrongActivity());
         wrongButton2.setOnClickListener(view -> openWrongActivity());
         wrongButton3.setOnClickListener(view -> openWrongActivity());
-        correctButton.setOnClickListener(view -> openQuestion2Activity());
+        correctButton.setOnClickListener(view -> openNextQuestionActivity());
     }
     private void openWrongActivity() {
         startActivity(new Intent(this, WrongActivity.class));
-        finish();
     }
-    private void openQuestion2Activity() {
+    private void openNextQuestionActivity() {
         startActivity(new Intent(this, Question2Activity.class));
         finish();
     }
