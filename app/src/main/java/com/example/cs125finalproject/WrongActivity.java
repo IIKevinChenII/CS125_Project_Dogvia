@@ -14,15 +14,6 @@ public class WrongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wrong);
         Button restartButton = findViewById(R.id.restartBtn);
-        restartButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openMainActivity();
-            }
-        });
-    }
-    private void openMainActivity() {
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
+        restartButton.setOnClickListener(view -> finish());
     }
 }

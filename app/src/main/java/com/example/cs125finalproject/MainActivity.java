@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,15 +13,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button startButton = findViewById(R.id.startBtn);
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openQuestion1Activity();
-            }
-        });
+        startButton.setOnClickListener(view -> openQuestion1Activity());
     }
     private void openQuestion1Activity() {
-        startActivity(new Intent(this, Question1Activity.class));
+        startActivity(new Intent(this, QuestionActivity.class));
         finish();
     }
 }

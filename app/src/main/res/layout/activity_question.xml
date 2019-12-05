@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Question2Activity">
+    tools:context=".QuestionActivity">
 
     <Button
         android:id="@+id/answerBtn1"
@@ -14,14 +14,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="10dp"
-        android:background="#811185A7"
+        android:background="#701185A7"
         android:fontFamily="sans-serif-light"
-        android:text="Answer 1"
         android:textColor="#DBEFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/answerBtn2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Answer 1" />
 
     <Button
         android:id="@+id/answerBtn2"
@@ -30,15 +30,15 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="10dp"
-        android:background="#811185A7"
+        android:background="#701185A7"
         android:fontFamily="sans-serif-light"
-        android:text="Answer 2"
         android:textColor="#DBEFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/answerBtn3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Answer 2" />
 
     <Button
         android:id="@+id/answerBtn3"
@@ -47,14 +47,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="10dp"
-        android:background="#811185A7"
+        android:background="#701185A7"
         android:fontFamily="sans-serif-light"
-        android:text="Answer 3"
         android:textColor="#DBEFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/answerBtn4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Answer 3" />
 
     <Button
         android:id="@+id/answerBtn4"
@@ -63,14 +63,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:background="#811185A7"
+        android:background="#701185A7"
         android:fontFamily="sans-serif-light"
-        android:text="Answer 4"
         android:textColor="#DBEFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Answer 4" />
 
     <TextView
         android:id="@+id/titleText"
@@ -80,14 +80,14 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="100dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Question 2"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Question 1" />
 
     <TextView
         android:id="@+id/questionText"
@@ -96,13 +96,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
-        android:text="This is a placeholder for a question about some cold knowledge for dogs"
+        android:fontFamily="sans-serif-thin"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        tools:text="Random test text: awodfph pwdoafiu aosdhf asadlfj asd l;sd als;dopq owieup asoidup r lrjk?" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
