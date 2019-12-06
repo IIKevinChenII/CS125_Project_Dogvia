@@ -23,20 +23,20 @@ public class QuestionActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
         Button ansButton1 = findViewById(R.id.answerBtn1);
         Button ansButton2 = findViewById(R.id.answerBtn2);
-        Button ansButton3 = findViewById(R.id.answerBtn4);
-        Button ansButton4 = findViewById(R.id.answerBtn3);
+        Button ansButton3 = findViewById(R.id.answerBtn3);
+        Button ansButton4 = findViewById(R.id.answerBtn4);
         ansButton1.setOnClickListener(view -> clickedAnswer(1));
         ansButton2.setOnClickListener(view -> clickedAnswer(2));
         ansButton3.setOnClickListener(view -> clickedAnswer(3));
         ansButton4.setOnClickListener(view -> clickedAnswer(4));
 
-        qsBank.add(new String[] {"Question 1", "trivia question", "answer1", "answer2", "answer3", "answer4", "1"});
-        qsBank.add(new String[] {"Question 2", "trivia question", "answer1", "answer2", "answer3", "answer4", "1"});
-        qsBank.add(new String[] {"Question 3", "trivia question", "answer1", "answer2", "answer3", "answer4", "1"});
-        qsBank.add(new String[] {"Question 4", "trivia question", "answer1", "answer2", "answer3", "answer4", "1"});
-        qsBank.add(new String[] {"Question 5", "trivia question", "answer1", "answer2", "answer3", "answer4", "1"});
-        qsBank.add(new String[] {"Question 6", "trivia question", "answer1", "answer2", "answer3", "answer4", "1"});
-        qsBank.add(new String[] {"Question 7", "trivia question", "answer1", "answer2", "answer3", "answer4", "1"});
+        qsBank.add(new String[] {"Question 1", "How many words can a dog learn?", "less than 100", "100 to 500", "500 to 1000", "more than 1000", "4"});
+        qsBank.add(new String[] {"Question 2", "Which is the most popular dog breed in 2018?", "German Shepherd Dog", "Labrador Retriever", "Golden Retriever", "French Bulldog", "2"});
+        qsBank.add(new String[] {"Question 3", "Who enacted a dog tax because the dogs were killing his sheep?", "Thomas Jefferson", "John Adams", "George Washington", "Benjamin Franklin", "1"});
+        qsBank.add(new String[] {"Question 4", "When do dogs see the best?", "Day time", "Dawn and dusk", "Night time", "Same except night time", "2"});
+        qsBank.add(new String[] {"Question 5", "Where do dogs sweat?", "Tongue", "Body", "Paws", "Tail", "3"});
+        qsBank.add(new String[] {"Question 6", "According to research, petting a dog can lower your _____?", "Blood pressure", "Immune tolerance", "Eyesight", "GPA", "1"});
+        qsBank.add(new String[] {"Question 7", "Dogs are direct descendants of _____?", "Horses", "Bears", "Foxes", "Wolves", "4"});
 
         refreshUI();
     }
