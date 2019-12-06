@@ -1,11 +1,14 @@
 package com.example.cs125finalproject;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
-import android.widget.TextView;
-
+import android.widget.ImageView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -16,7 +19,9 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import java.util.Properties;
+import java.io.InputStream;
+
+
 
 public class EmailActivity extends AppCompatActivity {
     /**
@@ -30,28 +35,51 @@ public class EmailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_email);
 // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        Button send = findViewById(R.id.sendBtn);
-        send.setOnClickListener(unused -> {
             // Request a string response from the provided URL.
-            StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                    new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            JsonParser parser = new JsonParser();
-                            JsonElement element = parser.parse(response);
-                            JsonObject object = (JsonObject) element;
-                            String imageUrl = object.get("message").getAsString();
-                            TextView textInput = findViewById(R.id.editText);
-                            String emailId = textInput.getText().toString();
-
-                        }
-                    }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-
-                }
-            });
-            queue.add(stringRequest);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        JsonParser parser = new JsonParser();
+                        JsonElement element = parser.parse(response);
+                        JsonObject object = (JsonObject) element;
+                        String imageUrl = object.get("message").getAsString();
+                        new DownloadImageTask((ImageView) findViewById(R.id.dogImage)).execute(imageUrl);
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
         });
+        queue.add(stringRequest);
+        Button restartButton = findViewById(R.id.homeButton);
+        restartButton.setOnClickListener(view -> openEndActivity());
+    }
+    private void openEndActivity() {
+        startActivity(new Intent(this, EndActivity.class));
+        finish();
+    }
+}
+final class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+    ImageView bmImage;
+    public DownloadImageTask(ImageView bmImage) {
+        this.bmImage = bmImage;
+    }
+
+    protected Bitmap doInBackground(String... urls) {
+        String urldisplay = urls[0];
+        Bitmap mIcon11 = null;
+        try {
+            InputStream in = new java.net.URL(urldisplay).openStream();
+            mIcon11 = BitmapFactory.decodeStream(in);
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+            e.printStackTrace();
+        }
+        return mIcon11;
+    }
+
+    protected void onPostExecute(Bitmap result) {
+        bmImage.setImageBitmap(result);
     }
 }
