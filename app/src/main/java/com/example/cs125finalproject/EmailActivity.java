@@ -16,6 +16,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.util.Properties;
+
 public class EmailActivity extends AppCompatActivity {
     /**
      * the url of the API
@@ -39,6 +41,8 @@ public class EmailActivity extends AppCompatActivity {
                             JsonElement element = parser.parse(response);
                             JsonObject object = (JsonObject) element;
                             String imageUrl = object.get("message").getAsString();
+                            TextView textInput = findViewById(R.id.editText);
+                            String emailId = textInput.getText().toString();
 
                         }
                     }, new Response.ErrorListener() {
