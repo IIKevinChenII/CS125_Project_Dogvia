@@ -26,21 +26,18 @@
     <Button
         android:id="@+id/startBtn"
         android:layout_width="196dp"
-        android:layout_height="69dp"
+        android:layout_height="80dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="100dp"
         android:layout_marginEnd="120dp"
-        android:layout_marginBottom="230dp"
+        android:layout_marginBottom="220dp"
         android:background="#701185A7"
         android:fontFamily="sans-serif-light"
         android:text="Start Challenge"
         android:textColor="#DBEFFF"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
