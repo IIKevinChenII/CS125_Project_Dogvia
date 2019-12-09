@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".EmailActivity">
 
     <ImageView
@@ -22,13 +23,17 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="221dp"
+        android:layout_height="119dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="141dp"
         android:layout_marginBottom="21dp"
+        android:fontFamily="sans-serif-light"
         android:text="Congragulations, you beat the quiz! here is a picture of a cute dog!"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/dogImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,13 +41,18 @@
 
     <Button
         android:id="@+id/homeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="207dp"
+        android:layout_height="58dp"
         android:layout_marginStart="159dp"
         android:layout_marginTop="47dp"
         android:layout_marginEnd="164dp"
         android:layout_marginBottom="79dp"
+        android:background="#701185A7"
+        android:fontFamily="sans-serif-light"
         android:text="To End"
+        android:textAlignment="center"
+        android:textColor="#DBEFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
