@@ -35,15 +35,18 @@ public class QuestionActivity extends AppCompatActivity {
         qsBank.add(new String[] {"Question 3", "Who enacted a dog tax because the dogs were killing his sheep?", "Thomas Jefferson", "John Adams", "George Washington", "Benjamin Franklin", "1"});
         qsBank.add(new String[] {"Question 4", "When do dogs see the best?", "Day time", "Dawn and dusk", "Night time", "Same except night time", "2"});
         qsBank.add(new String[] {"Question 5", "Where do dogs sweat?", "Tongue", "Body", "Paws", "Tail", "3"});
-        qsBank.add(new String[] {"Question 6", "According to research, petting a dog can lower your _____?", "Blood pressure", "Immune tolerance", "Eyesight", "GPA", "1"});
+        qsBank.add(new String[] {"Question 6", "According to research, petting a dog can reduce your _____?", "Blood pressure", "Immune tolerance", "Arthritis", "Lifespan", "1"});
         qsBank.add(new String[] {"Question 7", "Dogs are direct descendants of _____?", "Horses", "Bears", "Foxes", "Wolves", "4"});
+        qsBank.add(new String[] {"Question 8", "How many families in the U.S. own a dog?", "1 in 3", "1 in 5", "1 in 4", "1 in 2", "1"});
+        qsBank.add(new String[] {"Question 9", "In what country's capital was it illegal to own a dog as a pet?", "France", "Sweden", "Ukraine", "Iceland", "4"});
+        qsBank.add(new String[] {"Question 7", "What type of dog does not bark?", "Basenji", "Bulldog", "Shiba Inu", "Akita", "1"});
 
         refreshUI();
     }
     private void clickedAnswer(int index) {
         if (index == Integer.parseInt(qsBank.get(count)[6])) {
             count++;
-            if (count >= 7) {
+            if (count >= 10) {
                 startActivity(new Intent(this, EmailActivity.class));
                 finish();
                 return;
