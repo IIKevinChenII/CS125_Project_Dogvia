@@ -38,8 +38,8 @@ public class QuestionActivity extends AppCompatActivity {
         qsBank.add(new String[] {"Question 6", "According to research, petting a dog can reduce your _____?", "Blood pressure", "Immune tolerance", "Arthritis", "Lifespan", "1"});
         qsBank.add(new String[] {"Question 7", "Dogs are direct descendants of _____?", "Horses", "Bears", "Foxes", "Wolves", "4"});
         qsBank.add(new String[] {"Question 8", "How many families in the U.S. own a dog?", "1 in 3", "1 in 5", "1 in 4", "1 in 2", "1"});
-        qsBank.add(new String[] {"Question 9", "In what country's capital was it illegal to own a dog as a pet?", "France", "Sweden", "Ukraine", "Iceland", "4"});
-        qsBank.add(new String[] {"Question 7", "What type of dog does not bark?", "Basenji", "Bulldog", "Shiba Inu", "Akita", "1"});
+        qsBank.add(new String[] {"Question 9", "In what country's capital was it illegal to own a dog as a pet?", "France", "Sweden", "Iceland", "Ukraine", "3"});
+        qsBank.add(new String[] {"Question 7", "What type of dog does not bark?", "Doberman", "Basenji", "Shiba Inu", "Akita", "2"});
 
         refreshUI();
     }
